@@ -1,8 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import Link from "next/link";
-
+import { InlineWidget } from "react-calendly";
 const slides = [
   {
     image: "/images/banner-1.jpg",
@@ -23,7 +22,7 @@ const slides = [
 
 export default function HeroSection() {
   const [current, setCurrent] = useState(0);
-
+  const [isOpen, setIsOpen] = useState(false);
   // Auto-rotate every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
@@ -57,15 +56,34 @@ export default function HeroSection() {
             <p className="text-lg md:text-xl mb-6 text-gray-300">
               {slide.subtext}
             </p>
-            <Link
-              href="/contact"
+            <button
+              onClick={() => setIsOpen(true)}
               className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
             >
               Hire Me
-            </Link>
+            </button>
           </motion.div>
         </div>
       </div>
+      {isOpen && (
+        <div className="fixed inset-0 bg-black/70 z-50 flex items-center justify-center p-4">
+          <div className="bg-gray-900 rounded-xl shadow-lg w-full max-w-3xl relative overflow-hidden">
+            {/* Close Button */}
+            <button
+              onClick={() => setIsOpen(false)}
+              className="absolute top-2 right-2 text-white text-xl font-bold hover:text-red-500 transition"
+            >
+              &times;
+            </button>
+
+            {/* Calendly Inline Widget */}
+            <InlineWidget
+              url="https://calendly.com/vishalkumar" // change this
+              styles={{ height: "600px" }}
+            />
+          </div>
+        </div>
+      )}
     </section>
   );
 }
