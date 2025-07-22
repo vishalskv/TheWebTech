@@ -35,7 +35,7 @@ export default function HeroSection() {
 
   return (
     <section
-      className="w-full bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center transition-all duration-1000"
+      className="w-full bg-cover bg-center bg-no-repeat min-h-[600px] flex items-center transition-all duration-1000 mt-[60px]"
       style={{
         backgroundImage: `url(${slide.image})`,
       }}
