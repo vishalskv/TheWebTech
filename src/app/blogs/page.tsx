@@ -132,7 +132,7 @@ const page = () => {
     //     </div>
     //   </div>
     // </div>
-    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-14 mx-auto">
+    <div className="max-w-[85rem] px-4 py-10 sm:px-6 lg:px-8 lg:py-20 mx-auto">
       <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {blogs?.length > 0
           ? blogs.map((item, index) => (
@@ -169,7 +169,7 @@ const page = () => {
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
-                      stroke-width="2"
+                      // stroke-width="2"
                       stroke-linecap="round"
                       stroke-linejoin="round"
                     >
