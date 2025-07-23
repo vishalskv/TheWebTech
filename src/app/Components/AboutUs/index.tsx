@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import Link from "next/link";
+
 import { motion } from "framer-motion";
 import Colors from "@/app/Constant/colors";
 export default function AboutSection() {
@@ -66,8 +66,11 @@ export default function AboutSection() {
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  About Me
+                <h2
+                  className="text-3xl md:text-4xl font-bold text-white mb-4"
+                  style={{ color: Colors?.white }}
+                >
+                  {member.name}
                 </h2>
                 <p className="text-gray-300 text-base md:text-lg mb-4 leading-relaxed">
                   {member.description1}
@@ -75,13 +78,13 @@ export default function AboutSection() {
                 <p className="text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
                   {member.description2}
                 </p>
-                <Link
+                {/* <Link
                   href="/contact"
                   style={{ backgroundColor: Colors?.primary }}
                   className={`inline-block text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition`}
                 >
                   Contact Me
-                </Link>
+                </Link> */}
               </motion.div>
             </>
           ) : (
@@ -92,8 +95,11 @@ export default function AboutSection() {
                 transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
-                  About Me
+                <h2
+                  style={{ color: Colors?.white }}
+                  className="text-3xl md:text-4xl font-bold text-white mb-4"
+                >
+                  {member.name}
                 </h2>
                 <p className="text-gray-300 text-base md:text-lg mb-4 leading-relaxed">
                   {member.description1}
@@ -101,12 +107,13 @@ export default function AboutSection() {
                 <p className="text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
                   {member.description2}
                 </p>
-                <Link
+                {/* <Link
+                  style={{ backgroundColor: Colors?.primary }}
                   href="/contact"
                   className={`inline-block bg-[${Colors?.primary}] text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition`}
                 >
                   Contact Me
-                </Link>
+                </Link> */}
               </motion.div>
 
               <motion.div

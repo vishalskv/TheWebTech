@@ -1,3 +1,4 @@
+"use client";
 import Banner from "@/app/Components/Banner";
 import AboutUs from "@/app/Components/AboutUs";
 import ServicesSection from "./Components/ServicesSection";
