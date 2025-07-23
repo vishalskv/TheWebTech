@@ -5,7 +5,7 @@ import { InlineWidget } from "react-calendly";
 const slides = [
   {
     image: "/images/banner-1.jpg",
-    heading: "I’m Vishalkumar, a Web Developer",
+    heading: "I’m Vishalkumar ps, a Web Developer",
     subtext: "I build fast and responsive websites for businesses.",
   },
   {
