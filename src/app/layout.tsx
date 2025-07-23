@@ -1,18 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Poppins } from "next/font/google";
 import Navbar from "@/app/Components/Navbar";
 import Footer from "./Components/Footer";
-
+import FloatingIcons from "./FloatingIcons";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const poppins = Poppins({
+  weight: ["400", "500", "600", "700"],
   subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -22,14 +19,18 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" className="dark">
       <body
-        className={`className="bg-gray-900 text-gray-100" ${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${poppins.variable} bg-gray-900 text-gray-100 antialiased font-sans`}
       >
+        <div className="fixed inset-0 -z-10 overflow-hidden">
+          <FloatingIcons />
+        </div>
+
         <Navbar />
         {children}
         <Footer />

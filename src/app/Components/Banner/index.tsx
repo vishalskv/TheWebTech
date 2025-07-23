@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { InlineWidget } from "react-calendly";
+import Colors from "@/app/Constant/colors";
 const slides = [
   {
     image: "/images/banner-1.jpg",
@@ -41,11 +42,11 @@ export default function HeroSection() {
       }}
     >
       {/* Dark overlay */}
-      <div className="w-full min-h-[600px] bg-black/70 flex items-center">
+      <div className="w-full min-h-[600px] bg-black/40 flex items-center">
         <div className="max-w-7xl mx-auto px-4 w-full">
           <motion.div
             key={current} // triggers animation on change
-            className="text-white max-w-2xl"
+            className={`text-[${Colors?.white}] max-w-2xl`}
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -53,12 +54,13 @@ export default function HeroSection() {
             <h1 className="text-4xl md:text-6xl font-bold mb-6 leading-tight">
               {slide.heading}
             </h1>
-            <p className="text-lg md:text-xl mb-6 text-gray-300">
+            <p className={`text-lg md:text-xl mb-6 text-[${Colors?.white}]`}>
               {slide.subtext}
             </p>
             <button
+              style={{ backgroundColor: Colors?.primary }}
               onClick={() => setIsOpen(true)}
-              className="inline-block bg-blue-600 text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition"
+              className={`cursor-pointer inline-block  text-[${Colors?.white}] px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition`}
             >
               Hire Me
             </button>

@@ -3,7 +3,7 @@ import { Github, Linkedin, Mail } from "lucide-react";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-10 border-t border-t-amber-50">
+    <footer className=" text-white py-10 border-t border-t-amber-50">
       <div className="max-w-7xl mx-auto px-4 flex flex-col md:flex-row justify-between items-center gap-6">
         {/* Left: Name or Logo */}
         <div className="text-lg font-semibold">
@@ -13,7 +13,7 @@ export default function Footer() {
         {/* Right: Social Icons */}
         <div className="flex gap-6 text-gray-300">
           <Link
-            href="https://github.com/your-username"
+            href="https://github.com/vishalskv"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
@@ -21,7 +21,7 @@ export default function Footer() {
             <Github size={20} />
           </Link>
           <Link
-            href="https://linkedin.com/in/your-profile"
+            href="https://www.linkedin.com/in/vishalkumar-p-s-721995286"
             target="_blank"
             rel="noopener noreferrer"
             className="hover:text-white transition"
@@ -29,7 +29,7 @@ export default function Footer() {
             <Linkedin size={20} />
           </Link>
           <Link
-            href="mailto:your@email.com"
+            href="mailto:vishal.skv.21@gmail.com"
             className="hover:text-white transition"
           >
             <Mail size={20} />

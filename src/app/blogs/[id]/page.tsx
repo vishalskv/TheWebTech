@@ -29,7 +29,7 @@ export default function BlogDetailPage() {
   }
 
   return (
-    <section className="py-20 bg-gray-900 text-white min-h-screen">
+    <section className="py-20  text-white min-h-screen">
       <div className="max-w-3xl mx-auto px-4">
         <h1 className="text-4xl font-bold mb-6">{blog.title}</h1>
         <p className="mb-10 text-gray-400">Blog ID: {id}</p>
