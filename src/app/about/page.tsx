@@ -28,7 +28,7 @@ const teamMembers = [
 
 export default function AboutPage() {
   return (
-    <section className="py-20 min-h-screen bg-gray-900 text-gray-100">
+    <section className="py-20 min-h-screen  text-gray-100">
       <div className="max-w-7xl mx-auto px-4 text-center space-y-6">
         <motion.h1
           initial={{ opacity: 0, y: 30 }}

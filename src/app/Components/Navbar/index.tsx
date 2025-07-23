@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
+import Image from "next/image";
 
 const navItems = [
   { label: "Home", href: "/" },
@@ -16,11 +17,16 @@ export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-gray-900 text-gray-100  shadow z-50">
+    <header className="font-sans fixed top-0 left-0 w-full bg-gray-900 text-gray-100  shadow z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
         {/* Logo */}
         <Link href="/" className="text-xl font-bold text-gray-100">
-          WebDev
+          <Image
+            src="/images/teamwebtech-white.png"
+            alt="logo"
+            width={100}
+            height={100}
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -29,7 +35,7 @@ export default function Header() {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm font-medium text-gray-100 hover:text-blue-600 transition"
+              className="text-sm font-medium text-gray-100 hover:text-[rgb(253,78,21)] transition"
             >
               {item.label}
             </Link>
