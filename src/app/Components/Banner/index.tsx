@@ -35,12 +35,12 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full min-h-screen flex items-center justify-center overflow-hidden text-white">
+    <section className="relative w-full h-[500px] md:min-h-screen flex items-center justify-center overflow-hidden text-white">
       {/* Background Images */}
       {slides.map((slide, i) => (
         <div
           key={i}
-          className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ease-in-out z-[-2] ${
+          className={`absolute inset-0 bg-no-repeat bg-center bg-cover w-full h-full transition-opacity duration-1000 ease-in-out z-[-2] ${
             i === bgIndex ? "opacity-100" : "opacity-0"
           }`}
           style={{ backgroundImage: `url(${slide.image})` }}
