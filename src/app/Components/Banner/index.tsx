@@ -78,7 +78,7 @@ export default function HeroSection() {
 
             {/* Calendly Inline Widget */}
             <InlineWidget
-              url="https://calendly.com/vishalkumar" // change this
+              url="https://calendly.com/vishal-skv-21" // change this
               styles={{ height: "600px" }}
             />
           </div>
