@@ -1,12 +1,12 @@
 "use client";
 import Banner from "@/app/Components/Banner";
-// import AboutUs from "@/app/Components/AboutUs";
+import AboutUs from "@/app/Components/AboutUs";
 import ServicesSection from "./Components/ServicesSection";
 import PortfolioSection from "./Components/PortfolioSection";
 import ContactSection from "./Components/ContactForm";
 import MissionVissionSection from "./Components/Mission";
 import TestimonialsSection from "./Components/TestimonialsSection";
-import BlogSection from "./Components/BlogSection";
+// import BlogSection from "./Components/BlogSection";
 export default function Home() {
   return (
     <div>
@@ -15,8 +15,8 @@ export default function Home() {
       <PortfolioSection />
       <MissionVissionSection />
       <TestimonialsSection />
-      {/* <AboutUs /> */}
-      <BlogSection />
+      <AboutUs />
+      {/* <BlogSection /> */}
       <ContactSection />
     </div>
   );

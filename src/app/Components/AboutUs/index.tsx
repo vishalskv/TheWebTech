@@ -44,7 +44,7 @@ export default function AboutSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          Meet Our Team
+          Team Behind the Brand
         </motion.h2>
 
         <Swiper

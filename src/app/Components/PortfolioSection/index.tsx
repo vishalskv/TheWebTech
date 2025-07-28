@@ -7,23 +7,23 @@ const projects = [
   {
     title: "E-commerce Website",
     image: "/images/image-1.jpg",
-    link: "https://your-ecommerce-demo.com",
+    link: "https://clarion-three.vercel.app/",
   },
   {
     title: "Portfolio Website",
     image: "/images/image-2.jpg",
-    link: "https://your-portfolio.com",
+    link: "https://praveen-info.netlify.app/",
   },
   {
     title: "Landing Page",
     image: "/images/image-3.webp",
-    link: "https://landing-demo.netlify.app",
+    link: "https://www.leadsynq.com/",
   },
-  {
-    title: "Admin Dashboard",
-    image: "/images/image-1.jpg",
-    link: "https://admin-ui-demo.vercel.app",
-  },
+  // {
+  //   title: "Admin Dashboard",
+  //   image: "/images/image-1.jpg",
+  //   link: "https://admin-ui-demo.vercel.app",
+  // },
 ];
 
 export default function PortfolioSection() {
