@@ -7,10 +7,10 @@ import Image from "next/image";
 const navItems = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
-  { label: "Services", href: "/services" },
-  { label: "Portfolio", href: "/portfolio" },
-  { label: "Contact", href: "/contact" },
-  { label: "Blogs", href: "/blogs" },
+  // { label: "Services", href: "/services" },
+  // { label: "Portfolio", href: "/portfolio" },
+  // { label: "Contact", href: "/contact" },
+  // { label: "Blogs", href: "/blogs" },
 ];
 
 export default function Header() {

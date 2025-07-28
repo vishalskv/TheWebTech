@@ -7,6 +7,7 @@ import {
   Layers,
   Smartphone,
   Wrench,
+  Users,
 } from "lucide-react";
 
 const services = [
@@ -14,41 +15,49 @@ const services = [
     icon: <Code size={32} />,
     title: "Web Development",
     description:
-      "Building modern, responsive websites using React, Next.js and Tailwind CSS.",
+      "We build modern, scalable websites using React, Next.js, and Tailwind CSS.",
   },
   {
     icon: <Monitor size={32} />,
     title: "UI/UX Design",
     description:
-      "Creating clean, user-friendly interfaces with mobile-first approach.",
+      "Our team designs clean, intuitive, and user-centric interfaces with a mobile-first approach.",
   },
   {
     icon: <TrendingUp size={32} />,
     title: "Performance Optimization",
     description:
-      "Speed tuning, accessibility, SEO, and Core Web Vitals improvements.",
+      "We improve speed, accessibility, SEO, and Core Web Vitals for top-tier user experience.",
   },
   {
     icon: <Layers size={32} />,
     title: "Landing Pages",
-    description: "High-converting pages for products, apps, and campaigns.",
+    description:
+      "We create high-converting landing pages tailored for product launches and campaigns.",
   },
   {
     icon: <Smartphone size={32} />,
     title: "Responsive Design",
     description:
-      "Pixel-perfect layouts across all devices — phones, tablets, desktops.",
+      "Every layout we build is responsive and pixel-perfect across all devices.",
   },
   {
     icon: <Wrench size={32} />,
     title: "Maintenance & Support",
-    description: "Ongoing updates, bug fixing, and feature improvements.",
+    description:
+      "We offer ongoing updates, bug fixes, and iterative improvements as your tech partner.",
+  },
+  {
+    icon: <Users size={32} />,
+    title: "Consulting",
+    description:
+      "We provide expert guidance on tech stacks, architecture, and project roadmaps for startups and businesses.",
   },
 ];
 
 export default function ServicesSection() {
   return (
-    <section className="py-20  text-gray-100">
+    <section className="py-20 text-gray-100">
       <div className="max-w-7xl mx-auto px-4">
         <motion.h2
           className="text-3xl md:text-4xl font-bold text-center mb-12"
@@ -57,14 +66,14 @@ export default function ServicesSection() {
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
         >
-          My Services
+          Our Services
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-gray-800 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+              className="bg-gray-800 border border-gray-800 hover:border-blue-500 p-6 rounded-xl shadow-md hover:shadow-lg transition duration-300"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}

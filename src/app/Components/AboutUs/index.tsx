@@ -1,140 +1,97 @@
 "use client";
 import Image from "next/image";
-
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination } from "swiper/modules";
 import { motion } from "framer-motion";
-import Colors from "@/app/Constant/colors";
+import "swiper/css";
+import "swiper/css/pagination";
+
+const teamMembers = [
+  {
+    name: "Vishalkumar",
+    image: "/images/profile.jpg",
+    description1:
+      "Frontend developer building smooth, modern interfaces with React and Next.js.",
+    description2:
+      "Focused on performance, pixel perfection, and delightful user experiences.",
+  },
+  {
+    name: "Praveenkumar",
+    image: "/images/praveen.jpg",
+    description1:
+      "Frontend enthusiast turning ideas into responsive, scalable UI.",
+    description2:
+      "Always pushing boundaries with clean code and design-first mindset.",
+  },
+  {
+    name: "Ranjith",
+    image: "/images/ranjith.jpg",
+    description1:
+      "Passionate frontend engineer focused on mobile-first, accessible web.",
+    description2:
+      "Translating vision into code that performs and engages users.",
+  },
+];
+
 export default function AboutSection() {
-  const teamMembers = [
-    {
-      name: "Vishalkumar",
-      image: "/images/profile.jpg",
-      description1:
-        "I’m Vishalkumar, a frontend developer specializing in building modern, responsive, and user-friendly websites using technologies like React, Next.js, and Tailwind CSS.",
-      description2:
-        "With a strong focus on performance and clean UI, I help businesses and startups create fast and effective digital experiences.",
-      reverse: false,
-    },
-    {
-      name: "Praveenkumar",
-      image: "/images/praveen.jpg",
-      description1:
-        "I’m Praveenkumar, a frontend developer specializing in building modern, responsive, and user-friendly websites using technologies like React, Next.js, and Tailwind CSS.",
-      description2:
-        "With a strong focus on performance and clean UI, I help businesses and startups create fast and effective digital experiences.",
-      reverse: true,
-    },
-    {
-      name: "Ranjith",
-      image: "/images/ranjith.jpg",
-      description1:
-        "I’m Ranjith, a frontend developer specializing in building modern, responsive, and user-friendly websites using technologies like React, Next.js, and Tailwind CSS.",
-      description2:
-        "With a strong focus on performance and clean UI, I help businesses and startups create fast and effective digital experiences.",
-      reverse: false,
-    },
-  ];
-
   return (
-    <section className="py-16  text-gray-100 ">
-      {teamMembers.map((member, index) => (
-        <div
-          key={index}
-          className="max-w-7xl mx-auto px-4 grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-10"
+    <section className="py-20 bg-gradient-to-b from-[#020617] to-[#1e293b] text-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <motion.h2
+          className="text-4xl md:text-5xl font-bold text-center mb-14"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
         >
-          {/* Conditional Image Position */}
-          {!member.reverse ? (
-            <>
-              <motion.div
-                className="flex lg:justify-start justify-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={350}
-                  height={350}
-                  className="rounded-2xl shadow-lg"
-                />
-              </motion.div>
+          Meet Our Team
+        </motion.h2>
 
+        <Swiper
+          modules={[Autoplay, Pagination]}
+          autoplay={{ delay: 4000 }}
+          loop
+          pagination={{ clickable: true }}
+          spaceBetween={30}
+          breakpoints={{
+            320: { slidesPerView: 1 },
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
+          }}
+        >
+          {teamMembers.map((member, index) => (
+            <SwiperSlide key={index}>
               <motion.div
-                initial={{ opacity: 0, y: 40 }}
+                className="flex flex-col items-center text-center bg-white/10 backdrop-blur-lg border border-white/10 rounded-2xl p-6 shadow-lg transition hover:scale-[1.03]"
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
+                transition={{ duration: 0.5 }}
                 viewport={{ once: true }}
               >
-                <h2
-                  className="text-3xl md:text-4xl font-bold text-white mb-4"
-                  style={{ color: Colors?.white }}
-                >
+                <div className="w-36 h-36 rounded-full overflow-hidden border-4 border-white/20 shadow-lg mb-4">
+                  <Image
+                    src={member.image}
+                    alt={member.name}
+                    width={144}
+                    height={144}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h3 className="text-xl font-semibold text-blue-400 mb-1">
                   {member.name}
-                </h2>
-                <p className="text-gray-300 text-base md:text-lg mb-4 leading-relaxed">
+                </h3>
+                <p className="text-gray-300 text-sm mb-1 px-2">
                   {member.description1}
                 </p>
-                <p className="text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
+                <p className="text-gray-400 text-xs px-4">
                   {member.description2}
                 </p>
-                {/* <Link
-                  href="/contact"
-                  style={{ backgroundColor: Colors?.primary }}
-                  className={`inline-block text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition`}
-                >
-                  Contact Me
-                </Link> */}
               </motion.div>
-            </>
-          ) : (
-            <>
-              <motion.div
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.7, ease: "easeOut", delay: 0.2 }}
-                viewport={{ once: true }}
-              >
-                <h2
-                  style={{ color: Colors?.white }}
-                  className="text-3xl md:text-4xl font-bold text-white mb-4"
-                >
-                  {member.name}
-                </h2>
-                <p className="text-gray-300 text-base md:text-lg mb-4 leading-relaxed">
-                  {member.description1}
-                </p>
-                <p className="text-gray-400 text-base md:text-lg mb-6 leading-relaxed">
-                  {member.description2}
-                </p>
-                {/* <Link
-                  style={{ backgroundColor: Colors?.primary }}
-                  href="/contact"
-                  className={`inline-block bg-[${Colors?.primary}] text-white px-6 py-3 rounded-md font-semibold hover:bg-blue-700 transition`}
-                >
-                  Contact Me
-                </Link> */}
-              </motion.div>
-
-              <motion.div
-                className="flex lg:justify-end justify-center"
-                initial={{ opacity: 0, scale: 0.8 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                transition={{ duration: 0.6, ease: "easeOut" }}
-                viewport={{ once: true }}
-              >
-                <Image
-                  src={member.image}
-                  alt={member.name}
-                  width={350}
-                  height={350}
-                  className="rounded-2xl shadow-lg"
-                />
-              </motion.div>
-            </>
-          )}
-        </div>
-      ))}
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </section>
   );
 }
