@@ -6,22 +6,23 @@ import Colors from "@/app/Constant/colors";
 
 export default function HeroSection() {
   const [isOpen, setIsOpen] = useState(false);
-
   const slides = [
     {
       image: "/images/banner-1.jpg",
-      title: "Hello, I'm Vishalkumar",
-      description: "I build fast, responsive web apps using React & Next.js.",
+      title: "Modern Web Development",
+      description: "Building fast, scalable websites using modern stacks.",
     },
     {
       image: "/images/banner-2.jpg",
-      title: "Creative Web Developer",
-      description: "Delivering clean, scalable, and modern UI solutions.",
+      title: "Pixel-Perfect UI Design",
+      description:
+        "Crafting beautiful, responsive interfaces tailored for user experience.",
     },
     {
       image: "/images/photo.avif",
-      title: "Build with Performance",
-      description: "Optimized user experience with fast-loading interfaces.",
+      title: "End-to-End Solutions",
+      description:
+        "From design to deployment — complete solutions for your brand.",
     },
   ];
 
