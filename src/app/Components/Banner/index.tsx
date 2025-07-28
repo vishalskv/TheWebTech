@@ -30,10 +30,9 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       setBgIndex((prev) => (prev + 1) % slides.length);
-    }, 8000); // every 8 seconds
+    }, 8000);
     return () => clearInterval(interval);
-  }, []);
-
+  }, [slides.length]);
   return (
     <section className="relative w-full h-[500px] md:min-h-screen flex items-center justify-center overflow-hidden text-white">
       {/* Background Images */}

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
@@ -142,7 +143,7 @@ const page = () => {
                 key={index}
               >
                 <div className="relative pt-[50%] sm:pt-[70%] rounded-xl overflow-hidden">
-                  <img
+                  <Image
                     className="size-full absolute top-0 start-0 object-cover group-hover:scale-105 group-focus:scale-105 transition-transform duration-500 ease-in-out rounded-xl"
                     src="https://images.unsplash.com/photo-1586232702178-f044c5f4d4b7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=560&q=80"
                     alt="Blog Image"
@@ -161,7 +162,7 @@ const page = () => {
                   </p>
                   <p className="mt-5 inline-flex items-center gap-x-1 text-sm text-blue-600 decoration-2 group-hover:underline group-focus:underline font-medium dark:text-blue-500">
                     Read more
-                    <svg
+                    {/* <svg
                       className="shrink-0 size-4"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
@@ -174,7 +175,7 @@ const page = () => {
                       stroke-linejoin="round"
                     >
                       <path d="m9 18 6-6-6-6" />
-                    </svg>
+                    </svg> */}
                   </p>
                 </div>
               </Link>
