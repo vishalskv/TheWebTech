@@ -1,25 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
-// import { Resend } from "resend";
 
 export default function ContactSection() {
-  // const resend = new Resend("re_W9scK32n_9EkQdiqtE8AxH9PHE8uM4Dcg");
-  // const sendMain = async () => {
-  //   const res = await fetch("/api/sendmail", {
-  //     method: "POST",
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify({
-  //       email: "vishal.skv.21@gmail.com",
-  //       subject: "Test mail",
-  //       message: "Welcome to our platform!",
-  //     }),
-  //   });
-
-  //   const data = await res.json();
-  //   console.log(data);
-  // };
-
-  // re_W9scK32n_9EkQdiqtE8AxH9PHE8uM4Dcg
   return (
     <section className="py-20  text-gray-100">
       <div className="max-w-3xl mx-auto px-4">
@@ -49,16 +31,16 @@ export default function ContactSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          // onSubmit={(e) => {
-          //   sendMain();
-          // }}
+          onSubmit={(e) => {
+            e.preventDefault();
+            alert("Form submitted! (Placeholder)");
+          }}
         >
           <div>
             <label className="block mb-1 text-sm font-medium text-gray-300">
               Name
             </label>
             <input
-              name="name"
               type="text"
               className="w-full bg-gray-900 text-white border border-gray-600 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your Name"
@@ -71,7 +53,6 @@ export default function ContactSection() {
               Email
             </label>
             <input
-              name="email"
               type="email"
               className="w-full bg-gray-900 text-white border border-gray-600 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="you@example.com"
@@ -84,7 +65,6 @@ export default function ContactSection() {
               Message
             </label>
             <textarea
-              name="message"
               rows={4}
               className="w-full bg-gray-900 text-white border border-gray-600 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-blue-500"
               placeholder="Your message..."
